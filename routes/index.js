@@ -13,6 +13,6 @@ router.post('/userSignin',userActions.signin);
 
 //user information
 
-router.get('/userInfo',userActions.getInfo);
+router.get('/userInfo',userGuard,userActions.getInfo);
 
 module.exports = router;
