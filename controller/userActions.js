@@ -1,7 +1,9 @@
 var User = require('../models/user');
 var jwt = require('jsonwebtoken');
 var config = require('../config/config');
+var cloudinary = require('../config/cloudinary');
 const user = require('../models/user');
+
 
 var functions = {
     signup: function(req,res){
