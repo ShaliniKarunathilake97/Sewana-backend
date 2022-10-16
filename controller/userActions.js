@@ -59,7 +59,7 @@ var functions = {
                 return res.status(400).json({success:false,error:error});
             }
             else{
-                return res.status(200).json({success:true,user:{
+                return res.status(200).send({success:true,user:{
                     fullName:user.fullName,
                     emailOrTP:user.emailOrTP,
                     profileImage:user.userProfileImage,
