@@ -18,8 +18,11 @@ var userSchema = new Schema({
     },
     userProfileImage:{
         type: String,
-        default:""
+        default:"https://res.cloudinary.com/djddieojd/image/upload/v1665899741/Users/deafult-user_ogolpu.jpg"
     },
+    public_id:{
+        type:String
+    }
 },
     {timestamps:true}
 

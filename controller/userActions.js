@@ -50,7 +50,23 @@ var functions = {
 
         }
         );
+    },
+    getInfo: function(req,res){
+        user.findById({_id:req.userGuard._id},function(error,user){
+            if(error){
+                return res.status(400).json({success:false,error:error});
+            }
+            else{
+                return res.status(200).json({success:true,user:{
+                    fullName:user.fullName,
+                    emailOrTP:user.emailOrTP,
+                    profileImage:user.userProfileImage,
+                    public_id:user.public_id
+                }})
+            }
+        });
     }
 }
+
 
 module.exports = functions;
